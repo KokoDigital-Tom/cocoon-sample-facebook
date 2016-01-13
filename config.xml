@@ -26,4 +26,13 @@
     </platform>
     <preference name="Orientation" value="portrait"/>
     <preference name="Fullscreen" value="true"/>
+    </cocoon:plugin>
+    <cocoon:plugin name="cocoon-plugin-social-android-facebook">
+        <param name="APP_ID" value=""/>
+        <param name="APP_NAME" value=""/>
+    </cocoon:plugin>
+    <cocoon:plugin name="cocoon-plugin-social-ios-facebook">
+        <param name="APP_ID" value=""/>
+        <param name="APP_NAME" value=""/>
+    </cocoon:plugin>
 </widget>
