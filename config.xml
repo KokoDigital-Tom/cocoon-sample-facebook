@@ -34,4 +34,5 @@
         <param name="APP_ID" value=""/>
         <param name="APP_NAME" value=""/>
     </cocoon:plugin>
+    <preference name="android-minSdkVersion" value="15"/>
 </widget>
