@@ -9,22 +9,37 @@
 
     function initProviders() {
         if (window.Cocoon && Cocoon.Social && Cocoon.Social.Facebook) {
+            fbService = Cocoon.Social.Facebook;
+            fbService.init({
+               appId      : "1709291649301825",
+               xfbml      : true,
+               version    : 'v2.5'
 
-            fbService = Cocoon.Social.Facebook; //Pure Facebook API
-            fbService.init();
-            socialAPI = fbService.getSocialInterface(); //high level abstraction API
-            socialAPI.on("loginStatusChanged", function(loggedIn){
-                if (btnLogout) 
-                    btnLogout.visible = loggedIn;
-                if (btnLogin)
-                    btnLogin.visible = !loggedIn;
+            }, function () {
+                socialAPI = fbService.getSocialInterface(); //high level abstraction API
+                socialAPI.on("loginStatusChanged", function(loggedIn){
+                    alert("Login status: " + JSON.stringify(response));
+                    if (response.status === 'connected') {
+                        // the user is logged in and has authenticated your
+                        // app, and response.authResponse supplies
+                        // the user's ID, a valid access token, a signed
+                        // request, and the time the access token 
+                        // and signed request each expire
+
+                      } else if (response.status === 'not_authorized') {
+                        // the user is logged in to Facebook, 
+                        // but has not authenticated your app
+
+                      } else {
+
+                      }
+                });
             });
         }
         else {
             alert('Cocoon Facebook Plugin not installed');
         }
     }
-
 
     function showControls() {
 
