@@ -18,21 +18,7 @@
             }, function () {
                 socialAPI = fbService.getSocialInterface(); //high level abstraction API
                 socialAPI.on("loginStatusChanged", function(loggedIn){
-                    alert("Login status: " + JSON.stringify(response));
-                    if (response.status === 'connected') {
-                        // the user is logged in and has authenticated your
-                        // app, and response.authResponse supplies
-                        // the user's ID, a valid access token, a signed
-                        // request, and the time the access token 
-                        // and signed request each expire
-
-                      } else if (response.status === 'not_authorized') {
-                        // the user is logged in to Facebook, 
-                        // but has not authenticated your app
-
-                      } else {
-
-                      }
+                    alert("Logged In: " + JSON.stringify(loggedIn));
                 });
             });
         }
