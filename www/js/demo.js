@@ -11,7 +11,7 @@
         if (window.Cocoon && Cocoon.Social && Cocoon.Social.Facebook) {
             fbService = Cocoon.Social.Facebook;
             fbService.init({
-               appId      : "1709291649301825",
+               appId      : "571558323009738",
                xfbml      : true,
                version    : 'v2.5'
 
